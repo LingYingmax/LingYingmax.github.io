@@ -1,0 +1,62 @@
+main {
+  margin: 0 auto;
+  max-width: 572px;
+  padding: 0 4px;
+}
+
+.intro {
+  margin: 0 auto;
+  display: flex;              /* 横向排列头像和文字 */
+  align-items: center;        /* 垂直居中对齐 */
+  gap: 20px;                  /* 头像与文字间距 */
+  padding: 40px 40px 40px 0;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;         /* 变成圆形 */
+  object-fit: cover;          /* 防止拉伸变形 */
+}
+
+:root {
+  --intro-text-p: #000;
+  --main-d-p: #000;
+  --foot-a-h2: #000;
+  --foot-a-p: #000;
+}
+
+html.dark {
+  --intro-text-p: #fff;
+  --main-d-p: #fff;
+  --foot-a-h2: #fff;
+  --foot-a-p: #fff;
+}
+
+.intro-text p {
+  color: var(--intro-text-p);
+  font-size: 16px;
+}
+
+.main-d  p {
+  color: var(--main-d-p);
+  font-size: 20px;
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    gap: 20%;
+    padding: 10% 20%;
+}
+
+h2 {
+  color: var(--foot-a-h2);
+    font-size: 18px;
+}
+
+.foot-a-p {
+  color: var(--foot-a-p);
+    font-size: 16px;
+}

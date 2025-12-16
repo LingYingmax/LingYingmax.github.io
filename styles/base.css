@@ -1,0 +1,169 @@
+
+html {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+:root {
+  --glass: rgba(255, 255, 255, 0.15);
+  --header-bg: rgba(255, 255, 255, 0.4);
+  --header-bb: #ddd;
+  --links: #000;
+  --link-hover-bg: rgba(0,0,0,0.95);
+  --mobile-bg: rgba(255,255,255,0.95);
+  --mobile-box: rgba(0,0,0,0.1);
+  --mobile-a: #000;
+  --mobile-a-hover-bg: rgba(0,0,0,0.05);
+}
+
+html.dark {
+  --glass: rgba(20,20,20,0.85);
+  --header-bg: #1f1e33ee;
+  --header-bb: #333;
+  --links: #fff;
+  --link-hover-bg: rgba(255,255,255,0.1);
+  --mobile-bg: rgba(20,20,20,0.95);
+  --mobile-box: rgba(255,255,255,0.1);
+  --mobile-a: #fff;
+  --mobile-a-hover-bg: rgba(255,255,255,0.1);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0px;
+  border: 0px;
+  background-image: url("../images/MasNeri.webp");
+  background-size: cover;      /* 自动铺满整个页面 */
+  background-repeat: no-repeat;/* 不重复平铺 */
+  background-position: center; /* 居中对齐 */
+}
+
+.glass {
+  background: var(--glass);  /* 半透明 */
+  backdrop-filter: blur(4px);            /* 模糊背景 */
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;    /* 脱离文档流 */
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  /* 垂直方向居中排列子元素 */
+  padding: 10px 70px;
+  box-sizing: border-box;
+  width: 100%;
+  height:48px;
+
+  /* 顶栏半透明玻璃模糊效果 */
+  background: var(--header-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--header-bb);
+
+  position: fixed;  /*固定在顶部*/
+  top: 0;
+  left: 0;
+  z-index: 100;  /* 保证位于最上层 */
+
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  padding: 0px;
+  color: #7cbcf9;
+  white-space: nowrap;  /* 防止挤压换行 */
+  user-select: none;
+  text-shadow: 1px 1px 1px black;
+}
+
+.right-section {
+  display: flex;                     /* 右边所有元素横向排布 */
+  align-items: center;
+  gap: 2px;                          /* 右边元素之间的间距 */
+}
+
+.nav-links a,
+.github-link {
+  color: var(--links);                      /* 导航文字默认颜色为深灰 */
+  text-decoration: none;              /* 移除下划线 */
+  font-size: 13px;                    /* 链接文字大小 */
+  padding: 5px 8px;
+  border-radius: 6px;
+  transition: opacity 0.2s ease;      /* 悬停时透明度变化的动画 */
+}
+
+nav a:hover,
+.github-link:hover {
+  background-color: var(--links-hover-bg);
+  color: #5aafff;
+}
+
+.menu-btn-mobile {
+  display: none;
+}
+
+.mobile-menu.hide {
+  display: none;
+}
+
+.mobile-menu.show {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+
+  /* 隐藏桌面导航和按钮 */
+  .nav-links,
+  .menu-btn,
+  .github-link,
+  .theme-toggle {
+    display: none;
+  }
+
+  /* 显示移动端菜单按钮（右上三点） */
+  .menu-btn-mobile {
+    display: block;
+    font-size: 20px;
+    background: none;    
+    border: none;
+    cursor: pointer;
+  }
+
+  /* 移动端下拉菜单 */
+  .mobile-menu {
+    position: absolute;       /*固定在 header 下方*/
+    top: 60px;                /*离顶栏 60px*/
+    right: 40px;              /*对齐右边*/
+    background: var(--mobile-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;      /*圆角边框*/
+    padding: 10px;
+    display: flex;            /*对齐*/
+    flex-direction: column;    /*纵向排列菜单项*/
+    gap: 10px;
+    box-shadow: 0 4px 10px var(--mobile-box);   /*下拉菜单阴影*/
+  }
+
+  .mobile-menu a {
+    color: var(--mobile-a);                      /* 导航文字默认颜色为深灰 */
+    text-decoration: none;              /* 移除下划线 */
+    font-size: 13px;                    /* 链接文字大小 */
+    padding: 5px 8px;
+    border-radius: 6px;
+    transition: opacity 0.2s ease;
+  }
+  
+  .mobile-menu a:hover{
+    background-color: var(--mobile-a-hover-bg);
+    color: #5aafff;
+  }
+}
+
+main {
+  padding-top: 48px;
+}
