@@ -91,7 +91,7 @@ h1 {
 
 .nav-links a,
 .github-link {
-  color: var(--links);                      /* 导航文字默认颜色为深灰 */
+  color: var(--links);                /* 导航文字默认颜色为深灰 */
   text-decoration: none;              /* 移除下划线 */
   font-size: 13px;                    /* 链接文字大小 */
   padding: 5px 8px;
