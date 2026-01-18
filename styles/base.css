@@ -11,7 +11,7 @@ html {
   --header-bb: #ddd;
   --h1-shadow:#000;
   --links: #000;
-  --link-hover-bg: rgba(0,0,0,0.95);
+  --links-hover-bg: rgba(0,0,0,0.05);
   --menu-btn-mobile: #000;
   --mobile-bg: rgba(255,255,255,0.95);
   --mobile-box: rgba(0,0,0,0.1);
@@ -25,7 +25,7 @@ html.dark {
   --header-bb: #333;
   --h1-shadow:#fff;
   --links: #fff;
-  --link-hover-bg: rgba(255,255,255,0.1);
+  --links-hover-bg: rgba(255,255,255,0.1);
   --menu-btn-mobile: #fff;
   --mobile-bg: rgba(20,20,20,0.95);
   --mobile-box: rgba(255,255,255,0.1);

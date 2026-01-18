@@ -6,28 +6,37 @@ main {
 }
 
 :root {
-  --main-div-bg: rgba(255,255,255,0.8);
-  --main-div-p: rgba(0,0,0,1);
+  --main-aboutme-bg: rgba(255,255,255,0.8);
+  --main-aboutme-p: rgba(0,0,0,1);
 }
 
 html.dark {
-  --main-div-bg: rgba(0,0,0,0.3);
-  --main-div-p: rgba(255,255,255,1);
+  --main-aboutme-bg: rgba(0,0,0,0.3);
+  --main-aboutme-p: rgba(255,255,255,1);
 }
 
-.main-div {
-  background-color: var(--main-div-bg);
+.main-aboutme, .main-aboutweb {
+  background-color: var(--main-aboutme-bg);
   display:block;
   border-radius: 10px;
   padding: 5px 10px;
   margin-top: 5px;
 }
 
-.main-div p {
-  color: var(--main-div-p);
+.main-aboutme p, .main-aboutweb p {
+  color: var(--main-aboutme-p);
   font-size: 18px;
 }
 
-.main-div h2 {
-  color: var(--main-div-p);
+.main-aboutme h2, .main-aboutweb h2 {
+  color: var(--main-aboutme-p);
+}
+
+main a {
+  text-decoration: none;
+  color: var(--main-aboutme-p);
+}
+
+main a:hover {
+  color: #5aafff;
 }
