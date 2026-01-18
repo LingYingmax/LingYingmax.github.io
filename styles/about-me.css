@@ -8,11 +8,13 @@ main {
 :root {
   --main-aboutme-bg: rgba(255,255,255,0.8);
   --main-aboutme-p: rgba(0,0,0,1);
+  --link-bg: rgba(0,0,0,0.05);
 }
 
 html.dark {
   --main-aboutme-bg: rgba(0,0,0,0.3);
   --main-aboutme-p: rgba(255,255,255,1);
+  --link-bg: rgba(255,255,255,0.1);
 }
 
 .main-aboutme, .main-aboutweb {
@@ -35,8 +37,10 @@ html.dark {
 main a {
   text-decoration: none;
   color: var(--main-aboutme-p);
+  border-radius: 4px;
 }
 
 main a:hover {
+  background-color: var(--link-bg);
   color: #5aafff;
 }
