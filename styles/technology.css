@@ -1,6 +1,76 @@
 main {
   margin: 0 auto;
-  max-width: 572px;
+  max-width: 872px;
   padding-left: 24px;
   padding-right: 24px;
+}
+
+:root {
+  --main-bg: rgba(255,255,255,0.8);
+  --main-text: rgba(0,0,0,1);
+  --link-bg: rgba(0,0,0,0.05);
+}
+
+html.dark {
+  --main-bg: rgba(0,0,0,0.3);
+  --main-text: rgba(255,255,255,1);
+  --link-bg: rgba(255,255,255,0.1);
+}
+
+.main-head, .page-box {
+  background-color: var(--main-bg);
+  display:block;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+
+.main-head h2 {
+  color: var(--main-text);
+}
+
+.Technology-body {
+  margin-top: 15px;
+}
+
+.page-link {
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: var(--main-text);
+}
+
+.page-link:hover {
+  background-color: var(--link-bg);
+  color: #5aafff;
+}
+
+.page-box p {
+  padding: 0px 10px;
+  color: var(--main-text);
+}
+
+.time {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.next {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.next-link {
+  background-color: var(--main-bg);
+  display:block;
+  border-radius: 15px;
+  padding: 5px 10px;
+  margin-top: 5px;
+  text-decoration: none;
+  color: var(--main-text);
+}
+.next-link:hover {
+  background-color: var(--link-bg);
+  color: #5aafff;
 }

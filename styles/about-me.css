@@ -19,7 +19,7 @@ html.dark {
 
 .main-aboutme, .main-aboutweb {
   background-color: var(--main-aboutme-bg);
-  display:block;
+  display: block;
   border-radius: 10px;
   padding: 5px 10px;
   margin-top: 5px;
