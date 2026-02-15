@@ -1,0 +1,41 @@
+main {
+  margin: 0 auto;
+  max-width: 872px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+:root {
+  --main-bg: rgba(255,255,255,0.8);
+  --main-text: rgba(0,0,0,1);
+  --link-bg: rgba(0,0,0,0.05);
+}
+
+html.dark {
+  --main-bg: rgba(0,0,0,0.3);
+  --main-text: rgba(255,255,255,1);
+  --link-bg: rgba(255,255,255,0.1);
+}
+
+.main-d {
+  background-color: var(--main-bg);
+  display: block;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+
+p, h2 {
+  color: var(--main-text);
+}
+
+main a {
+  text-decoration: none;
+  color: var(--main-text);
+  border-radius: 4px;
+}
+
+main a:hover {
+  background-color: var(--link-bg);
+  color: #5aafff;
+}
