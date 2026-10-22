@@ -23,32 +23,52 @@
           <a href="Technology.html">Technology</a>
           <a href="index.html">Home</a>
           <a href="Friends.html">Friends</a>
-          <a href="admin.html">Admin</a>
           <a href="login.html">Login</a>
         </nav>
         <button class="theme-toggle" data-theme-toggle type="button" role="switch" aria-checked="false">Change</button>
       </div>
-      <button class="menu-btn-mobile">鈽?/button>
+      <button class="menu-btn-mobile">☰</button>
       <div class="mobile-menu hide">
         <a href="About-me.html">About me</a>
         <a href="Technology.html">Technology</a>
         <a href="index.html">Home</a>
         <a href="Friends.html">Friends</a>
-        <a href="admin.html">Admin</a>
         <a href="login.html">Login</a>
         <button class="mobile-theme-btn" data-theme-toggle>Change</button>
       </div>
     </header>
 
     <main class="admin-main">
-      <section class="admin-card">
+      <section class="admin-card" id="login-panel">
         <h2>Login</h2>
-        <form id="user-login-form">
+        <form id="login-form">
           <label>Username<input name="username" autocomplete="username" required></label>
           <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
           <button type="submit">Login</button>
         </form>
-        <p class="admin-message" id="user-login-message"></p>
+        <p class="admin-message" id="login-message"></p>
+      </section>
+
+      <section class="admin-card is-hidden" id="admin-panel">
+        <div class="admin-heading">
+          <h2>Article management</h2>
+          <button type="button" id="logout-button">Logout</button>
+        </div>
+        <form id="article-form">
+          <input type="hidden" name="id">
+          <label>Slug<input name="slug" pattern="[a-z0-9]+(?:-[a-z0-9]+)*" required></label>
+          <label>Title<input name="title" required></label>
+          <label>Summary<textarea name="summary" rows="2"></textarea></label>
+          <label>Content<textarea name="content" rows="8"></textarea></label>
+          <label>Published date<input name="published_on" type="date" required></label>
+          <label class="checkbox-label"><input name="published" type="checkbox" checked> Published</label>
+          <div class="admin-actions">
+            <button type="submit">Save article</button>
+            <button type="button" id="cancel-edit">Clear</button>
+          </div>
+        </form>
+        <p class="admin-message" id="article-message"></p>
+        <div id="article-list"></div>
       </section>
     </main>
   </body>
