@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="LingYingmax" />
+    <link rel="icon" href="images/web-head.jpg" type="image/jpg" />
+    <link href="styles/base.css" rel="stylesheet" />
+    <link href="styles/admin.css" rel="stylesheet" />
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/login.js" defer></script>
+    <title>Login - LingYingmax's Blog</title>
+  </head>
+
+  <body>
+    <div class="glass"></div>
+    <header>
+      <h1>LingYingmax's Blog</h1>
+      <div class="right-section">
+        <nav class="nav-links">
+          <a href="About-me.html">About me</a>
+          <a href="Technology.html">Technology</a>
+          <a href="index.html">Home</a>
+          <a href="Friends.html">Friends</a>
+          <a href="admin.html">Admin</a>
+          <a href="login.html">Login</a>
+        </nav>
+        <button class="theme-toggle" data-theme-toggle type="button" role="switch" aria-checked="false">Change</button>
+      </div>
+      <button class="menu-btn-mobile">鈽?/button>
+      <div class="mobile-menu hide">
+        <a href="About-me.html">About me</a>
+        <a href="Technology.html">Technology</a>
+        <a href="index.html">Home</a>
+        <a href="Friends.html">Friends</a>
+        <a href="admin.html">Admin</a>
+        <a href="login.html">Login</a>
+        <button class="mobile-theme-btn" data-theme-toggle>Change</button>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <section class="admin-card">
+        <h2>Login</h2>
+        <form id="user-login-form">
+          <label>Username<input name="username" autocomplete="username" required></label>
+          <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+          <button type="submit">Login</button>
+        </form>
+        <p class="admin-message" id="user-login-message"></p>
+      </section>
+    </main>
+  </body>
+
+</html>

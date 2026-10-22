@@ -31,6 +31,7 @@
           <a href="../Technology.html">Technology</a>
           <a href="../index.html">Home</a>
           <a href="../Friends.html">Friends</a>
+          <a href="../login.html">Login</a>
         </nav>
         <!--主题button-->
         <button class="theme-toggle" data-theme-toggle type="button" role="switch" title="Switch to dark theme"
@@ -48,18 +49,30 @@
           <a href="../Technology.html">Technology</a>
           <a href="../index.html">Home</a>
           <a href="../Friends.html">Friends</a>
+          <a href="../login.html">Login</a>
         <a class="github-link-b" href="https://github.com/LingYingmax" target="_blank" rel="noopener">GitHub</a>
         <button class="mobile-theme-btn" data-theme-toggle>Change</button>
       </div>
     </header>
 
     <main>
-      <div class="main-d">
-        <h2>wwww</h2>
-        <p>wwww</p>
+      <div class="main-d" data-article data-api-base="../api" data-article-slug="t-1">
+        <h2 data-article-title>wwww</h2>
+        <p data-article-content>wwww</p>
       </div>
+      <section class="comments" data-comments data-api-base="../api" data-article-slug="t-1">
+        <h2>Comments</h2>
+        <div data-comments-list></div>
+        <form data-comment-form>
+          <textarea name="content" rows="4" maxlength="2000" placeholder="Leave a comment..."></textarea>
+          <button type="submit">Submit</button>
+        </form>
+        <p data-comment-message></p>
+      </section>
     </main>
 
   </body>
 
+  <script src="../scripts/article.js" defer></script>
+  <script src="../scripts/comments.js" defer></script>
 </html>

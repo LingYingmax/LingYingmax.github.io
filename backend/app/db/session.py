@@ -8,10 +8,8 @@ from app.core.config import settings
 
 @lru_cache
 def get_engine() -> Engine:
-    if not settings.database_url:
-        raise RuntimeError("DATABASE_URL is not configured")
-
-    return create_engine(settings.database_url, pool_pre_ping=True)
+    connect_args = {"check_same_thread": False} if settings.database_url.startswith("sqlite") else {}
+    return create_engine(settings.database_url, pool_pre_ping=True, connect_args=connect_args)
 
 
 def get_session_factory() -> sessionmaker[Session]:

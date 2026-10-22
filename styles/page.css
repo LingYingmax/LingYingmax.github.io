@@ -39,3 +39,52 @@ main a:hover {
   background-color: var(--link-bg);
   color: #5aafff;
 }
+
+.comments {
+  background-color: var(--main-bg);
+  border-radius: 10px;
+  color: var(--main-text);
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.comments h2,
+.comments p,
+.comments strong,
+.comments time {
+  color: var(--main-text);
+}
+
+.comments form {
+  display: grid;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.comments textarea {
+  border: 1px solid var(--main-text);
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding: 8px;
+  resize: vertical;
+  width: 100%;
+}
+
+.comments button {
+  justify-self: start;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.comment {
+  border-top: 1px solid var(--header-bb);
+  padding: 10px 0;
+}
+
+.comment time {
+  font-size: 12px;
+  margin-left: 10px;
+  opacity: 0.7;
+}

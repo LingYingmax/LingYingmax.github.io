@@ -1,0 +1,90 @@
+.admin-main {
+  max-width: 872px;
+  margin: 0 auto;
+  padding: 64px 24px 30px;
+}
+
+.admin-card {
+  background: var(--main-bg, rgba(255, 255, 255, 0.8));
+  color: var(--main-text, #000);
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 12px;
+}
+
+.admin-card h2,
+.admin-card p,
+.admin-card label {
+  color: var(--main-text, #000);
+}
+
+.admin-card form {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-card label {
+  display: grid;
+  gap: 5px;
+}
+
+.admin-card input,
+.admin-card textarea {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid var(--header-bb);
+  border-radius: 6px;
+  padding: 8px;
+  background: var(--glass);
+  color: var(--main-text, #000);
+  font: inherit;
+}
+
+.admin-card button {
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.admin-heading,
+.admin-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.checkbox-label {
+  display: flex !important;
+  align-items: center;
+}
+
+.checkbox-label input {
+  width: auto;
+}
+
+.admin-message {
+  min-height: 1.2em;
+}
+
+.admin-article {
+  border-top: 1px solid var(--header-bb);
+  padding: 12px 0;
+}
+
+.admin-article h3,
+.admin-article p {
+  margin: 5px 0;
+}
+
+.is-hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .admin-main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

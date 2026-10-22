@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="LingYingmax" />
+    <meta name="description" content="About LingYingmax's Blog" />
+    <link rel="icon" href="../images/web-head.jpg" type="image/jpg" />
+
+    <link href="../styles/base.css" rel="stylesheet" />
+    <link href="../styles/page.css" rel="stylesheet" />
+    <script src="../scripts/main.js" defer></script>
+
+    <title>LingYingmax's Blog</title>
+  </head>
+
+  <body>
+    <div class="glass"></div>
+
+    <header>
+      <h1>LingYingmax's Blog</h1>
+      <div class="right-section">
+        <nav class="nav-links">
+          <a href="../About-me.html">About me</a>
+          <a href="../Technology.html">Technology</a>
+          <a href="../index.html">Home</a>
+          <a href="../Friends.html">Friends</a>
+          <a href="../login.html">Login</a>
+        </nav>
+        <button class="theme-toggle" data-theme-toggle type="button" role="switch" title="Switch to dark or light" aria-checked="false">Change</button>
+        <a class="github-link" href="https://github.com/LingYingmax" aria-label="github" target="_blank" rel="noopener">GitHub</a>
+      </div>
+
+      <button class="menu-btn-mobile">鈽?/button>
+      <div class="mobile-menu hide">
+        <a href="../About-me.html">About me</a>
+        <a href="../Technology.html">Technology</a>
+        <a href="../index.html">Home</a>
+        <a href="../Friends.html">Friends</a>
+        <a href="../login.html">Login</a>
+        <a class="github-link-b" href="https://github.com/LingYingmax" target="_blank" rel="noopener">GitHub</a>
+        <button class="mobile-theme-btn" data-theme-toggle>Change</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-d" data-article data-api-base="../api">
+        <h2 data-article-title>wwww</h2>
+        <p data-article-content>wwww</p>
+      </div>
+      <section class="comments" data-comments data-api-base="../api">
+        <h2>Comments</h2>
+        <div data-comments-list></div>
+        <form data-comment-form>
+          <textarea name="content" rows="4" maxlength="2000" placeholder="Leave a comment..."></textarea>
+          <button type="submit">Submit</button>
+        </form>
+        <p data-comment-message></p>
+      </section>
+    </main>
+
+    <script src="../scripts/article.js" defer></script>
+    <script src="../scripts/comments.js" defer></script>
+  </body>
+
+</html>
